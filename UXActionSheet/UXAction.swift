@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
-struct UXAction {
-    var title: String!
-    var type: UXActionSheetType!
-//    var target: AnyObject?
-//    var action: Selector?
-    var completion: (()->Void)
+public struct UXAction {
+    public var title: String!
+    public var type: UXActionSheetType!
+    public var completion: (()->Void)
+    
+    public init(title: String, type: UXActionSheetType, completion: (()->Void)) {
+        self.title = title
+        self.type = type
+        self.completion = completion
+    }
 }

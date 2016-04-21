@@ -8,8 +8,8 @@
 
 import UIKit
 
-class UXActionSheet: UIViewController, UXActionSheetStylable {
-
+public class UXActionSheetView: UIViewController, UXActionSheetStylable {
+    // MARK: Definitions
     // MARK: Outlets
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var tableView: UITableView!
@@ -17,29 +17,36 @@ class UXActionSheet: UIViewController, UXActionSheetStylable {
     @IBOutlet weak var cancelBtn: UIButton!
     @IBOutlet weak var cancelBtnBtmCS: NSLayoutConstraint!
     
+    // MARK: Constants
     let cellHeight: CGFloat = 60.0
-    var style: UXActionStyle?
     
     // MARK: Variables
-    var actions: [UXAction]!
+    public var actions: [UXAction]!
+    public var style: UXActionStyle!
     
-    init(actions: [UXAction]) {
-        self.actions = actions
-        super.init(nibName: "UXActionSheet", bundle: NSBundle.mainBundle())
+    public var cell: UINib?
+    
+    public init() {
+        super.init(nibName: "UXActionSheetView", bundle: NSBundle(identifier: "uk.jackchmbrln.UXActionSheet"))
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public init(withActions actions: [UXAction]) {
+        self.actions = actions
+        super.init(nibName: "UXActionSheetView", bundle: NSBundle(identifier: "uk.jackchmbrln.UXActionSheet"))
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // MARK: Register table view cells
-        self.tableView.registerNib(UINib(nibName: "UXActionSheetCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "actionCell")
+        self.tableView.registerNib(UINib(nibName: "UXActionSheetCell", bundle: NSBundle(identifier: "uk.jackchmbrln.UXActionSheet")), forCellReuseIdentifier: "actionCell")
         
         // Tap gesture for dismiss the action sheet
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UXActionSheet.dismissActionSheet))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UXActionSheetView.dismissActionSheet))
         self.backgroundView.addGestureRecognizer(tap)
         
         // MARK: Set Delegate and Data Source
@@ -61,12 +68,12 @@ class UXActionSheet: UIViewController, UXActionSheetStylable {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override public func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override public func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
     }
@@ -90,35 +97,52 @@ class UXActionSheet: UIViewController, UXActionSheetStylable {
     @IBAction func cancelButtonTapped(sender: AnyObject) {
         self.dismissActionSheet()
     }
+    
+    public func present() -> Bool {
+        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            
+            topController.presentActionSheet(withAction: self.actions, style: self.style)
+            // topController should now be your topmost view controller
+        }
+        return true
+    }
 }
 
 // MARK: Table view delegates
-extension UXActionSheet: UITableViewDataSource, UITableViewDelegate {
+extension UXActionSheetView: UITableViewDataSource, UITableViewDelegate {
     // MARK: Number of sections in table
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     // MARK: Number of rows in table
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return actions.count
     }
     
     // MARK: Cell for row
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("actionCell", forIndexPath: indexPath) as! UXActionSheetCell
+        cell.style = self.style
         cell.setCell(withAction: self.actions[indexPath.row])
         return cell
     }
     
     // MARK: Select row at index path
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.actions[indexPath.row].completion()
         self.dismissActionSheet()
     }
     
     // MARK: Height for row
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.cellHeight
     }
+}
+
+extension UIViewController: UXActionSheetPresentable {
+    
 }

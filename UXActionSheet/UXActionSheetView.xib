@@ -10,7 +10,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UXActionSheet" customModule="Sole_Exchange" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UXActionSheetView" customModule="UXActionSheet" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="NwV-Ms-P2H" id="PVv-iu-UT4"/>
                 <outlet property="cancelBtn" destination="nj7-bz-I9Q" id="n5T-iu-hoc"/>

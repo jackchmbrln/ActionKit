@@ -8,19 +8,16 @@
 
 import UIKit
 
-class UXActionSheetCell: UITableViewCell, UXActionSheetStylable {
+class UXActionSheetCell: UITableViewCell {
     // MARK: Outlets
     @IBOutlet weak var actionTitle: UILabel!
     
-    var style: UXActionStyle?
-    
     // MARK: Variables
+    var style: UXActionStyle?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        self.style = UXActionStyle(font: UIFont.systemFontOfSize(15), size: 15.0, defaultColor: UIColor.blackColor(), destructiveColor: UIColor.redColor())
         self.selectionStyle = .None
     }
     

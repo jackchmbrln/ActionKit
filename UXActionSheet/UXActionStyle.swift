@@ -8,14 +8,28 @@
 
 import UIKit
 
-enum UXActionSheetType {
+public enum UXActionSheetType {
     case Default
     case Destructive
 }
 
-struct UXActionStyle {
-    var font: UIFont?
-    var size: CGFloat?
-    var defaultColor: UIColor?
-    var destructiveColor: UIColor?
+public struct UXActionStyle {
+    public var font: UIFont?
+    public var size: CGFloat?
+    public var defaultColor: UIColor?
+    public var destructiveColor: UIColor?
+    
+    public init(font: UIFont?, size: CGFloat?, defaultColor: UIColor?, destructiveColor: UIColor?) {
+        self.font = font
+        self.size = size
+        self.defaultColor = defaultColor
+        self.destructiveColor = destructiveColor
+    }
+    
+    public init() {
+        self.font = UIFont.systemFontOfSize(15)
+        self.size = nil
+        self.defaultColor = UIColor.blackColor()
+        self.destructiveColor = UIColor.redColor()
+    }
 }
