@@ -3,7 +3,6 @@
 # Uncomment this line if you're using Swift
 # use_frameworks!
 
-target 'ActionKit' do
+target 'UXActionKit' do
 
 end
-
