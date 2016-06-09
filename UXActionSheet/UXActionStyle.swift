@@ -18,18 +18,21 @@ public struct UXActionStyle {
     public var size: CGFloat?
     public var defaultColor: UIColor?
     public var destructiveColor: UIColor?
+    public var backgroundColor: UIColor?
     
-    public init(font: UIFont?, size: CGFloat?, defaultColor: UIColor?, destructiveColor: UIColor?) {
+    public init(font: UIFont?, size: CGFloat?, defaultColor: UIColor?, destructiveColor: UIColor?, backgroundColor: UIColor?) {
         self.font = font
         self.size = size
         self.defaultColor = defaultColor
         self.destructiveColor = destructiveColor
+        self.backgroundColor = backgroundColor
     }
     
     public init() {
         self.font = UIFont.systemFontOfSize(15)
-        self.size = nil
+        self.size = 15
         self.defaultColor = UIColor.blackColor()
         self.destructiveColor = UIColor.redColor()
+        self.backgroundColor = UIColor.whiteColor()
     }
 }

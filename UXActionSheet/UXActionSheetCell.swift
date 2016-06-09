@@ -19,6 +19,9 @@ class UXActionSheetCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.selectionStyle = .None
+        
+        self.backgroundColor = self.style?.backgroundColor
+        self.actionTitle.font = self.style?.font
     }
     
     // MARK: Apply styling to cell

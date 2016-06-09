@@ -9,27 +9,8 @@
 import Foundation
 import UIKit
 
-protocol UXActionSheetPresentable {
-    func presentActionSheet(withAction actions: Array<UXAction>, style: UXActionStyle?) -> Void
-}
-
 protocol UXActionSheetStylable {
     var style: UXActionStyle! { get }
-}
-
-extension UXActionSheetPresentable where Self: UIViewController {
-    func presentActionSheet(withAction actions: Array<UXAction>, style: UXActionStyle?) -> Void {
-        let sheet = UXActionSheetView(withActions: actions)
-        if style == nil {
-            sheet.style = UXActionStyle()
-        }
-        else {
-            sheet.style = style
-        }
-        sheet.modalPresentationStyle = UIModalPresentationStyle.OverFullScreen
-        sheet.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        self.presentViewController(sheet, animated: true, completion: nil)
-    }
 }
 
 public func delay(delay:Double, closure:()->()) {

@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		042DBE7F1CC946EE00AC69D5 /* UXActionSheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 042DBE7E1CC946EE00AC69D5 /* UXActionSheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		042DBE7F1CC946EE00AC69D5 /* ActionKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 042DBE7E1CC946EE00AC69D5 /* ActionKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		042DBE8D1CC9472600AC69D5 /* UXActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBE861CC9472600AC69D5 /* UXActionSheetCell.swift */; };
 		042DBE8E1CC9472600AC69D5 /* UXActionSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042DBE871CC9472600AC69D5 /* UXActionSheetCell.xib */; };
 		042DBE8F1CC9472600AC69D5 /* UXActionSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBE881CC9472600AC69D5 /* UXActionSheetView.swift */; };
 		042DBE901CC9472600AC69D5 /* UXActionSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042DBE891CC9472600AC69D5 /* UXActionSheetView.xib */; };
 		042DBE911CC9472600AC69D5 /* UXActionSheetPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBE8A1CC9472600AC69D5 /* UXActionSheetPresentable.swift */; };
-		042DBE921CC9472600AC69D5 /* UXAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBE8B1CC9472600AC69D5 /* UXAction.swift */; };
-		042DBE931CC9472600AC69D5 /* UXActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBE8C1CC9472600AC69D5 /* UXActionStyle.swift */; };
-		042DBECE1CC94AE700AC69D5 /* UXActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DBECD1CC94AE700AC69D5 /* UXActionCell.swift */; };
+		0461BE991D09780A0096C303 /* UXAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461BE961D09780A0096C303 /* UXAction.swift */; };
+		0461BE9A1D09780A0096C303 /* UXActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461BE971D09780A0096C303 /* UXActionCell.swift */; };
+		0461BE9B1D09780A0096C303 /* UXActionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461BE981D09780A0096C303 /* UXActionStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		042DBE7B1CC946EE00AC69D5 /* UXActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UXActionSheet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		042DBE7E1CC946EE00AC69D5 /* UXActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UXActionSheet.h; sourceTree = "<group>"; };
+		042DBE7B1CC946EE00AC69D5 /* UXActionSheet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UXActionSheet.framework; path = ActionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		042DBE7E1CC946EE00AC69D5 /* ActionKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionKit.h; sourceTree = "<group>"; };
 		042DBE801CC946EE00AC69D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042DBE861CC9472600AC69D5 /* UXActionSheetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionSheetCell.swift; sourceTree = "<group>"; };
 		042DBE871CC9472600AC69D5 /* UXActionSheetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UXActionSheetCell.xib; sourceTree = "<group>"; };
 		042DBE881CC9472600AC69D5 /* UXActionSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionSheetView.swift; sourceTree = "<group>"; };
 		042DBE891CC9472600AC69D5 /* UXActionSheetView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UXActionSheetView.xib; sourceTree = "<group>"; };
 		042DBE8A1CC9472600AC69D5 /* UXActionSheetPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionSheetPresentable.swift; sourceTree = "<group>"; };
-		042DBE8B1CC9472600AC69D5 /* UXAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXAction.swift; sourceTree = "<group>"; };
-		042DBE8C1CC9472600AC69D5 /* UXActionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionStyle.swift; sourceTree = "<group>"; };
-		042DBECD1CC94AE700AC69D5 /* UXActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionCell.swift; sourceTree = "<group>"; };
+		0461BE961D09780A0096C303 /* UXAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXAction.swift; sourceTree = "<group>"; };
+		0461BE971D09780A0096C303 /* UXActionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionCell.swift; sourceTree = "<group>"; };
+		0461BE981D09780A0096C303 /* UXActionStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UXActionStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		042DBE7D1CC946EE00AC69D5 /* UXActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				042DBE7E1CC946EE00AC69D5 /* UXActionSheet.h */,
+				042DBE7E1CC946EE00AC69D5 /* ActionKit.h */,
 				042DBE801CC946EE00AC69D5 /* Info.plist */,
 				042DBE941CC9472A00AC69D5 /* Sheet */,
 			);
@@ -93,9 +93,9 @@
 		042DBECF1CC94AF200AC69D5 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				042DBE8B1CC9472600AC69D5 /* UXAction.swift */,
-				042DBE8C1CC9472600AC69D5 /* UXActionStyle.swift */,
-				042DBECD1CC94AE700AC69D5 /* UXActionCell.swift */,
+				0461BE961D09780A0096C303 /* UXAction.swift */,
+				0461BE971D09780A0096C303 /* UXActionCell.swift */,
+				0461BE981D09780A0096C303 /* UXActionStyle.swift */,
 			);
 			name = Structs;
 			sourceTree = "<group>";
@@ -107,16 +107,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042DBE7F1CC946EE00AC69D5 /* UXActionSheet.h in Headers */,
+				042DBE7F1CC946EE00AC69D5 /* ActionKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		042DBE7A1CC946EE00AC69D5 /* UXActionSheet */ = {
+		042DBE7A1CC946EE00AC69D5 /* UXActionKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 042DBE831CC946EE00AC69D5 /* Build configuration list for PBXNativeTarget "UXActionSheet" */;
+			buildConfigurationList = 042DBE831CC946EE00AC69D5 /* Build configuration list for PBXNativeTarget "UXActionKit" */;
 			buildPhases = (
 				042DBE761CC946EE00AC69D5 /* Sources */,
 				042DBE771CC946EE00AC69D5 /* Frameworks */,
@@ -127,7 +127,7 @@
 			);
 			dependencies = (
 			);
-			name = UXActionSheet;
+			name = UXActionKit;
 			productName = UXActionSheet;
 			productReference = 042DBE7B1CC946EE00AC69D5 /* UXActionSheet.framework */;
 			productType = "com.apple.product-type.framework";
@@ -146,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 042DBE751CC946EE00AC69D5 /* Build configuration list for PBXProject "UXActionSheet" */;
+			buildConfigurationList = 042DBE751CC946EE00AC69D5 /* Build configuration list for PBXProject "UXActionKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				042DBE7A1CC946EE00AC69D5 /* UXActionSheet */,
+				042DBE7A1CC946EE00AC69D5 /* UXActionKit */,
 			);
 		};
 /* End PBXProject section */
@@ -180,12 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042DBE921CC9472600AC69D5 /* UXAction.swift in Sources */,
+				0461BE9B1D09780A0096C303 /* UXActionStyle.swift in Sources */,
+				0461BE9A1D09780A0096C303 /* UXActionCell.swift in Sources */,
+				0461BE991D09780A0096C303 /* UXAction.swift in Sources */,
 				042DBE911CC9472600AC69D5 /* UXActionSheetPresentable.swift in Sources */,
 				042DBE8F1CC9472600AC69D5 /* UXActionSheetView.swift in Sources */,
 				042DBE8D1CC9472600AC69D5 /* UXActionSheetCell.swift in Sources */,
-				042DBE931CC9472600AC69D5 /* UXActionStyle.swift in Sources */,
-				042DBECE1CC94AE700AC69D5 /* UXActionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,8 +294,8 @@
 				INFOPLIST_FILE = UXActionSheet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.jackchmbrln.UXActionSheet;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.jackchmbrln.ActionKit;
+				PRODUCT_NAME = UXActionKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -312,8 +312,8 @@
 				INFOPLIST_FILE = UXActionSheet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = uk.jackchmbrln.UXActionSheet;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = uk.jackchmbrln.ActionKit;
+				PRODUCT_NAME = UXActionKit;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -321,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		042DBE751CC946EE00AC69D5 /* Build configuration list for PBXProject "UXActionSheet" */ = {
+		042DBE751CC946EE00AC69D5 /* Build configuration list for PBXProject "UXActionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				042DBE811CC946EE00AC69D5 /* Debug */,
@@ -330,7 +330,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		042DBE831CC946EE00AC69D5 /* Build configuration list for PBXNativeTarget "UXActionSheet" */ = {
+		042DBE831CC946EE00AC69D5 /* Build configuration list for PBXNativeTarget "UXActionKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				042DBE841CC946EE00AC69D5 /* Debug */,

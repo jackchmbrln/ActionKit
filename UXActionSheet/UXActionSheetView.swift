@@ -11,18 +11,22 @@ import UIKit
 public class UXActionSheetView: UIViewController, UXActionSheetStylable {
     // MARK: Definitions
     // MARK: Outlets
-    @IBOutlet weak var backgroundView: UIView!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeightCS: NSLayoutConstraint!
-    @IBOutlet weak var cancelBtn: UIButton!
-    @IBOutlet weak var cancelBtnBtmCS: NSLayoutConstraint!
+    @IBOutlet private weak var backgroundView: UIView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeightCS: NSLayoutConstraint!
+    @IBOutlet private weak var cancelBtn: UIButton!
+    @IBOutlet private weak var cancelBtnBtmCS: NSLayoutConstraint!
     
     // MARK: Constants
     let cellHeight: CGFloat = 60.0
     
     // MARK: Variables
     public var actions: [UXAction]!
-    public var style: UXActionStyle!
+    public var style: UXActionStyle! {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     public var cell: UINib?
     
@@ -97,18 +101,6 @@ public class UXActionSheetView: UIViewController, UXActionSheetStylable {
     @IBAction func cancelButtonTapped(sender: AnyObject) {
         self.dismissActionSheet()
     }
-    
-    public func present() -> Bool {
-        if var topController = UIApplication.sharedApplication().keyWindow?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
-            }
-            
-            topController.presentActionSheet(withAction: self.actions, style: self.style)
-            // topController should now be your topmost view controller
-        }
-        return true
-    }
 }
 
 // MARK: Table view delegates
@@ -141,8 +133,4 @@ extension UXActionSheetView: UITableViewDataSource, UITableViewDelegate {
     public func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return self.cellHeight
     }
-}
-
-extension UIViewController: UXActionSheetPresentable {
-    
 }
